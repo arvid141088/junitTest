@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Passenger.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PracticeJunit</a> &gt; <a href="index.source.html" class="el_package">passenger_details</a> &gt; <span class="el_source">Passenger.java</span></div><h1>Passenger.java</h1><pre class="source lang-java linenums">package passenger_details;
+
+
+public class Passenger {
+    private String title;
+    private String name;
+    private String id;
+    private String phone;
+    private Integer age;
+
+
+<span class="fc" id="L12">    public Passenger(String t,String n,String i,String p,Integer a){</span>
+
+<span class="fc" id="L14">       setTitle(t);</span>
+<span class="fc" id="L15">       setName(n);</span>
+<span class="fc" id="L16">       setId(i);</span>
+<span class="fc" id="L17">       setPhone(p);</span>
+<span class="fc" id="L18">       setAge(a);</span>
+
+
+
+
+
+
+
+<span class="fc" id="L26">    }</span>
+
+
+        /**
+         * Getters and Setters
+         */
+
+            public String getTitle() {
+<span class="fc" id="L34">                return title;</span>
+            }
+
+            public void setTitle(String t) {
+
+<span class="fc bfc" id="L39" title="All 6 branches covered.">                if(t== &quot;Mr&quot; || t==&quot;Mrs&quot; || t==&quot;Ms&quot;){</span>
+<span class="fc" id="L40">                    this.title = t;</span>
+                }
+                else{
+
+<span class="fc" id="L44">                    throw new IllegalArgumentException(&quot;Title is wrong. Must be either Mr, Mrs or Ms&quot;);</span>
+                }
+
+<span class="fc" id="L47">            }</span>
+
+            public String getName() {
+<span class="fc" id="L50">                return name;</span>
+            }
+
+            public void setName(String n) {
+<span class="fc bfc" id="L54" title="All 2 branches covered.">                if (n.length()&lt;3){</span>
+<span class="fc" id="L55">                    throw new IllegalArgumentException(&quot;Name is Incorrect. Must be at least 3 charachters&quot;);</span>
+                }
+                else{
+<span class="fc" id="L58">                    this.name = n;</span>
+                }
+
+<span class="fc" id="L61">            }</span>
+
+            public String getId() {
+<span class="fc" id="L64">                return id;</span>
+            }
+
+            public void setId(String i) {
+<span class="fc bfc" id="L68" title="All 2 branches covered.">                if (i.length()&lt;10){</span>
+<span class="fc" id="L69">                    throw new IllegalArgumentException(&quot;ID is incorrect. Must be at least 10 characters long&quot;);</span>
+                }
+                else{
+<span class="fc" id="L72">                    this.id = i;</span>
+                }
+
+<span class="fc" id="L75">            }</span>
+
+            public String getPhone() {
+<span class="fc" id="L78">                return phone;</span>
+            }
+
+            public void setPhone(String p) {
+<span class="fc" id="L82">               p.toString();</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">                if(p.length()&lt;10){</span>
+<span class="fc" id="L84">                    throw new IllegalArgumentException(&quot;Phone number must be minimum 10 characters long&quot;);</span>
+                }
+                else{
+<span class="fc" id="L87">                    this.phone = p;</span>
+                }
+
+
+<span class="fc" id="L91">            }</span>
+
+            public Integer getAge() {
+<span class="fc" id="L94">                return age;</span>
+            }
+
+            public void setAge(Integer a) {
+
+<span class="fc bfc" id="L99" title="All 2 branches covered.">                if(a&lt;16){</span>
+<span class="fc" id="L100">                    throw new IllegalArgumentException(&quot;Age must be over 16. You can't fly&quot;);</span>
+                }
+                else{
+<span class="fc" id="L103">                    this.age = a;</span>
+                }
+<span class="fc" id="L105">            }</span>
+} //End Passenger
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
